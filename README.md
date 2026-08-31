@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# Ivoire Pool — site vitrine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Intégration **React + Vite + TypeScript + Tailwind CSS v4** de la maquette Figma **« Ivoire Pool »**, responsive (mobile / tablette / desktop) avec animations d'apparition au scroll, carrousel de projets, accordéon FAQ et menu mobile.
 
-Currently, two official plugins are available:
+## 🌐 Démo en ligne
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Le site est disponible en ligne :
 
-## React Compiler
+👉 **[Voir le site déployé](https://blanche-piscinevercel.app)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+`https://blanche-piscinevercel.app`
 
-## Expanding the ESLint configuration
+## Démarrage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Le site est disponible sur http://localhost:5173.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Build de production
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
+```
 
+## Structure
+
+```text
+src/
+  assets/images/     # Visuels exportés depuis le fichier Figma d'origine
+  components/        # Un composant par section de la page
+  hooks/useReveal.ts # Hook d'apparition au scroll (IntersectionObserver)
+  index.css          # Design tokens Tailwind v4 (@theme) + styles globaux
+  App.tsx            # Assemblage des sections
 ```
