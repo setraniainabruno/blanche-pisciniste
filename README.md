@@ -6,9 +6,9 @@ Intégration **React + Vite + TypeScript + Tailwind CSS v4** de la maquette Figm
 
 Le site est disponible en ligne :
 
-👉 **[Voir le site déployé](https://blanche-piscinevercel.app)**
+👉 **[Voir le site déployé](https://blanchepiscinisteivoirepool.vercel.app/)**
 
-`https://blanche-piscinevercel.app`
+`https://blanchepiscinisteivoirepool.vercel.app/`
 
 ## Démarrage
 
